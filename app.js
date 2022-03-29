@@ -137,43 +137,41 @@
 // const a = []
 // a = [1203]
 
-
 //~~~~~~~~~~~ Class 2 ~~~~~~~~~~~
 
-
-let a = ['a','b','c'];
-let b = [
-  {
-    id: 1,
-    name: "Muhammad Ali",
-    category: "a",
-  },
-  {
-    id: 2,
-    name: "Abdul Basit",
-    category: "a",
-  },
-  {
-    id: 3,
-    name: "Muhammad Ahmed",
-    category: "b",
-  },
-  {
-    id: 4,
-    name: "Ahmed Ali",
-    category: "a",
-  },
-  {
-    id: 5,
-    name: "Yaseen Ahmed",
-    category: "b",
-  },
-  {
-    id: 6,
-    name: "Muhammad Furqan",
-    category: "a",
-  },
-];
+// let a = ['a','b','c'];
+// let b = [
+//   {
+//     id: 1,
+//     name: "Muhammad Ali",
+//     category: "a",
+//   },
+//   {
+//     id: 2,
+//     name: "Abdul Basit",
+//     category: "a",
+//   },
+//   {
+//     id: 3,
+//     name: "Muhammad Ahmed",
+//     category: "b",
+//   },
+//   {
+//     id: 4,
+//     name: "Ahmed Ali",
+//     category: "a",
+//   },
+//   {
+//     id: 5,
+//     name: "Yaseen Ahmed",
+//     category: "b",
+//   },
+//   {
+//     id: 6,
+//     name: "Muhammad Furqan",
+//     category: "a",
+//   },
+// ];
 
 // for(var i=0; i<a.length; i++){
 //     console.log(a[i])
@@ -253,14 +251,109 @@ let b = [
 
 // console.log(bool)
 
+// let a = {
+//   id: 1,
+//   title: "abc",
+// };
 
+// let keys = Object.keys(a);
+// let values = Object.values(a);
+// console.log(values);
 
+// var a = ["asd"];
+// var b = a;
 
+// b.push("abc");
+// console.log(a);
 
+// let a = {
+//   id: 1,
+//   name: "abc",
+// };
+// let b = 123;
 
+// function ab() {
+//   a.name = "xyz";
+//   b = 456;
+// }
+// ab();
+// console.log(a);
+// console.log(b);
 
+// ====== De Structure ==========
+// let a = {
+//   id: 1,
+//   name: "abc",
+//   category: "C",
+// };
 
+// let { name, id, category } = a;
 
+// console.log(category);
 
+// let a = {
+//   id: 1,
+//   title: "abc",
+//   b: {
+//     id: 32,
+//     subName: "xyz",
+//     arr: [1, 2, 3],
+//   },
+// };
 
+// let { id } = a.b;
 
+// console.log(id);
+
+// let a = ["abc", "def", "ghi", "jkl", [1, 2, 3, 4, 5]];
+
+// let [firstIndexValue, val2, , forthVal] = a[4];
+
+// console.log(val2);
+
+// let [val1, val2, val3] = a.b.arr;
+
+// let a = ["abc", "def", "ghi", "jkl", [1, 2, 3, 4, 5], { id: 1, name: "abc" }];
+
+// let [val1, val2] = a[4];
+
+// console.log(val1, val2);
+
+// ==================== spread Operator ============
+
+// let masterDetail = {
+//   institute: "SAIMS",
+//   batch: 456,
+//   GRN: "ab12345",
+// };
+
+// let duplicateMaster = {
+//   ...masterDetail,
+// };
+
+// masterDetail.GRN = 2564560127;
+
+// console.log(duplicateMaster);
+
+// let a = ["a", "b", "c"];
+// let b = [...a];
+
+// a.push("d");
+
+// console.log(b);
+
+// let a = ["a", "b", "c"];
+// let b = [1, 2, 3, ...a];
+// console.log(b);
+
+// lexical scoping
+// types of function
+// closures
+// promise
+
+let a = "abc";
+
+function ab() {
+  let a = 123;
+  console.log(a);
+}
