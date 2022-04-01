@@ -346,14 +346,135 @@
 // let b = [1, 2, 3, ...a];
 // console.log(b);
 
+// let a = "abc";
+
+// function ab() {
+//   let a = 123;
+//   console.log(a);
+// }
+
 // lexical scoping
 // types of function
 // closures
 // promise
 
-let a = "abc";
+// let a = "xyz";
 
-function ab() {
-  let a = 123;
-  console.log(a);
+// function ab() {
+//   let a = "abc";
+//   console.log(a);
+// }
+
+// TYPES OF FUNCTION
+
+// *** arrow function
+
+// let abc = (a) => {
+//   console.log(a);
+// };
+
+// abc("Message");
+
+// let xyz = (a) => {
+//   return a;
+// };
+
+// console.log(xyz("Hello Basit Ahmed"));
+
+// let abc = a => {
+//   console.log(a);
+// };
+
+// abc('Hello')
+
+// let abc = (a,b) => {
+//   console.log(a);
+//   console.log(b);
+// };
+
+// abc('Hello','World')
+
+// let a = () => 'asdasd';
+
+// console.log(a())
+
+// let a = _ => _
+
+// let a = (a, b) => a == b ? "Match" : "Not Match";
+
+// console.log(a(10, 11));
+
+//*** Higher Order Function
+
+
+// let a = e=>{
+//   console.log(e)
+// }
+
+// let b = (bval)=>{
+
+//   return bval
+// }
+
+
+// a(b('Hello JS'))
+
+
+// let a = (e)=>{
+//   return ()=>{ 
+//     return ()=>{
+//       let a = e
+//     }
+//   }
+// }
+
+// a('hjakshdkj')()()
+
+
+let a = (e)=>{
+  if(e){
+    console.log('if Scope')
+  }else{
+    console.log('else Scope')
+  }
 }
+
+a()
+
+
+
+
+
+// let a = (e = 'Dummy')=>{
+//   console.log(e)
+// }
+// a()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*** call back Function
+
+
+
+
+
+
