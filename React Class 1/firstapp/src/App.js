@@ -1,34 +1,64 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
+import { ABButton, ABCButton } from "./button";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [arr, setArr] = useState([
+    {
+      id: 1,
+      title: "ABC",
+    },
+    {
+      id: 2,
+      title: "XYZ",
+    },
+    {
+      id: 3,
+      title: "AB12",
+    },
+  ]);
   const [text, setText] = useState("");
-  const [obj, setObj] = useState({});
-  const [arr, setArr] = useState(["a", "b", "c", "d", "e"]);
+  const [textArr, setTextArr] = useState([]);
+  const [xyz, setXyz] = useState(true);
 
-  let add = () => {
-    setCount(count + 1);
-    console.log(count);
+  let addTodo = () => {
+    setTextArr([...textArr, text]);
+    setText("");
   };
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Hello React</h1>
-        <input
+        {/* <input
+          value={text}
+          type="text"
           onChange={(e) => setText(e.target.value)}
-          placeholder="Enter text"
+          placeholder="Enter Text"
+          name=""
+          id=""
         />
-        <p>{text}</p>
-
-        {arr.map((e, i) => {
-          return <p>{e}</p>;
-          
+        <button onClick={addTodo}>add</button>
+        {textArr.map((e, i) => {
+          return (
+            <p className="abc" key={i}>
+              {e} <button>Edit</button>
+            </p>
+          );
         })}
+        <div
+          style={{ width: "200px", height: "200px", backgroundColor: "blue" }}
+        ></div> */}
 
-        <button onClick={add}>Add</button>
-        <p>{count}</p>
+        <ABButton btnValue="ABC" customClass="btn" />
+        <ABButton btnValue="XYZ" />
+
+        {xyz ? (
+          <div>
+            <h1>XYZ</h1>
+          </div>
+        ) : null}
       </header>
     </div>
   );
