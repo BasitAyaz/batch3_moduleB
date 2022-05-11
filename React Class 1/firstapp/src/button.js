@@ -1,8 +1,9 @@
-function ABButton(e) {
-  return <button className={e.customClass}>{e.btnValue}</button>;
-}
-function ABCButton(e) {
-  return <button className={e.customClass}>{e.btnValue}</button>;
+function Button(props) {
+  return <button onClick={props.click}>{props.val}</button>;
 }
 
-export { ABButton, ABCButton };
+function Input() {
+  return <input placeholder="Enter Value" />;
+}
+
+export { Button, Input };
