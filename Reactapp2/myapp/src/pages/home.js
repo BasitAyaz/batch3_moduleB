@@ -1,6 +1,28 @@
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Home() {
+  const hitAPI = () => {
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    //   .then((response) => response.json())
+    //   .then((json) => console.log(json));
+
+    axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
+      console.log(res);
+    });
+    axios
+      .post("https://jsonplaceholder.typicode.com/posts", {
+        name: "ABC",
+        title: "123",
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
       <div>
@@ -13,6 +35,7 @@ function Home() {
             <Link to="/services">Services</Link>
           </li>
         </ul>
+        <Button onClick={hitAPI}>API</Button>
       </div>
     </>
   );
